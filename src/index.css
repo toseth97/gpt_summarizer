@@ -1,0 +1,96 @@
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root{
+  -color1: #EB5D0C;
+  -color2: #F49B0B;
+}
+
+*{
+  font-family: "Kanit", sans-serif;
+}
+
+#root{
+  background: radial-gradient(circle, #130e0e15 10%, transparent 10%);
+  background-size: 1em 1em;
+  background-color: transparent;
+  min-height: 100vh;
+}
+
+
+.orange_gradient{
+  background-image: radial-gradient(circle,#f8b445, #EB5D0C, #db66ed, #ffbc50);
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  background-size: 500% 100%; 
+  background-clip: text;
+  transition: .5s ease-in-out;
+  animation: move-bg 10s linear infinite alternate; /* Animation properties */
+}
+
+@keyframes move-bg {
+  from { background-position: 0 0; }
+  to { background-position: -200% 0; } /* Move 200% to cover entire text */
+}
+
+.link_icon{
+  position: absolute;
+  top: 50%; 
+  transform: translateY(-50%);
+  left: 10px;
+}
+.enter_icon{
+  position: absolute;
+  top: 50%; 
+  transform: translateY(-50%);
+  right: 15px;
+  height: 30px;
+  width: 30px;
+  transition: .5s ease-in-out;
+}
+.enter_icon:hover{
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  background-color: #130e0e4f;
+}
+
+
+.input{
+  border:1px solid #130e0e15;
+  border-radius: 25px;
+  transition: .5px solid;
+}
+
+.input:focus, .input:active{
+  box-shadow: 1px 0px 5px 1px #130e0e3e;
+  border: 1px solid transparent;
+}
+
+/* loading animation */
+
+.load{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 10px dotted #EB5D0C;
+ 
+  animation: rotate 3s linear infinite;
+
+}
+
+@keyframes rotate{
+  0%{
+    transform: rotate(0);
+    
+  }
+  
+  100%{
+    transform: rotate(360deg);
+    
+  }
+}
